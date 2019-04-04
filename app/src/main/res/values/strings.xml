@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title_activity_weather">weather</string>
+    <string name="visbility">VISBILITY</string>
+    <string name="pressure">PRESSURE</string>
+    <string name="wind">WIND</string>
+    <string name="humidity">HUMIDITY</string>
+    <string name="chance_of_rain">CHACSE OF RAIN</string>
+    <string name="chance_of_snow">CHANCE OF SNOW</string>
+    <string name="chance_of_precipitation">CHANCE OF PRECIPITATION</string>
+    <string name="sunset">SUNSET</string>
+    <string name="sunrise">SUNRISE</string>
+    <string name="title_activity_city_list">CityList</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+</resources>
