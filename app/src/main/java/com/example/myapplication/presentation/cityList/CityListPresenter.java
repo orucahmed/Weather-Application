@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -38,7 +39,10 @@ public class CityListPresenter {
     }
 
     private String getQuery() {
-        return TextUtils.join(",", prefCities.getStringSet("cities", new HashSet<String>()));
+        Set<String> cities = new TreeSet<>(prefCities.getStringSet("cities", new HashSet<String>()));
+        TreeSet<String> citiesTrimmed = new TreeSet<>();
+        for(String s : cities) citiesTrimmed.add(s.split(":")[0]);
+        return TextUtils.join(",",citiesTrimmed );
     }
 
     @Inject
@@ -72,8 +76,11 @@ public class CityListPresenter {
     public void deleteFromPref(String city) {
         Set<String> cities = new HashSet<>();
         SharedPreferences.Editor editor = prefCities.edit();
-        cities.addAll(prefCities.getStringSet("cities", new HashSet<String>()));
-        cities.remove(city);
+        cities=prefCities.getStringSet("cities",new HashSet<String>());
+        for(String s : cities) if(s.contains(city)) {
+            cities.remove(s);
+            break;
+        }
         editor.putStringSet("cities", cities);
         editor.commit();
     }

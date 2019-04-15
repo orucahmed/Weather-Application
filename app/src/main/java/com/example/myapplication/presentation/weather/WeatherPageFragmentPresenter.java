@@ -154,7 +154,8 @@ public class WeatherPageFragmentPresenter {
                                         String.valueOf((container.getWeatherResponse().getVisibility()) / 1000) + " km",
                                         String.valueOf((int) container.getWeatherResponse().getMain().getTemp_max()) + "˚",
                                         String.valueOf((int) container.getWeatherResponse().getMain().getTemp_min()) + "˚",
-                                        "icon" + container.getWeatherResponse().getWeather().get(0).getIcon(), formatDate.format(new Date((container.getWeatherResponse().getSys().getSunrise() + timeOffest.getCurrentOffsert() ) * 1000)),
+                                        "icon" + container.getWeatherResponse().getWeather().get(0).getIcon(),
+                                        formatDate.format(new Date((container.getWeatherResponse().getSys().getSunrise() + timeOffest.getCurrentOffsert() ) * 1000)),
                                         formatDate.format(new Date((container.getWeatherResponse().getSys().getSunset() + timeOffest.getCurrentOffsert()) * 1000)),
                                         formatDateDay.format(new Date(container.getWeatherResponse().getSys().getSunset() * 1000)),
                                         forma.format(new Date(container.getWeatherResponse().getSys().getSunset() * 1000)));

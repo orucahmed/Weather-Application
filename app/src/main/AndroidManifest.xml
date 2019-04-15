@@ -5,6 +5,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
     <application
         android:name=".di.MyApplication"
         android:allowBackup="true"
@@ -13,16 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <receiver android:name=".view.widget.Widget">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-            </intent-filter>
 
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/widget_info" />
-        </receiver>
-
+        <activity android:name=".view.notification.NotificationActivity" />
         <activity android:name=".view.weather.WeatherPageActivity" />
         <activity android:name=".view.cityList.CityListActivity" />
         <activity android:name=".view.main.MainActivity">
@@ -35,6 +29,11 @@
         <activity
             android:name=".view.weather.WeatherPageActivity"
             tools:ignore="DuplicateActivity" />
+
+        <service
+            android:name=".data.weather.NotificationJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE">
+        </service>
     </application>
 
 </manifest>

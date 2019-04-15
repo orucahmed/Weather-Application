@@ -4,6 +4,9 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
+import io.objectbox.annotation.Entity;
+
+
 public class WeatherResponseFiveDays {
 
     private long code;

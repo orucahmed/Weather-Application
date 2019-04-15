@@ -17,6 +17,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -25,6 +26,7 @@ import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Scheduler;
+import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 
@@ -68,12 +70,13 @@ public class MainPresenter {
     private MainView view;
     private List<CityCountry> listCityCountry;
     private List<Integer> listCityId;
+    private final CompositeDisposable compositeDisposable = new CompositeDisposable();
 
     @Inject
     public MainPresenter(@Named("cities") SharedPreferences prefCities, @Named("position") SharedPreferences prefPosition, Context context) {
         this.prefCities = prefCities;
         this.prefPosition = prefPosition;
-        this.context=context;
+        this.context = context;
     }
 
     public void onCreate(MainView view) {
@@ -87,7 +90,7 @@ public class MainPresenter {
             }
         });
 
-        observable.subscribeOn(Schedulers.io()).subscribe(new Consumer<List<CityCountry>>() {
+        compositeDisposable.add(observable.subscribeOn(Schedulers.io()).subscribe(new Consumer<List<CityCountry>>() {
             @Override
             public void accept(List<CityCountry> cityCountries) throws Exception {
                 listCityCountry = cityCountries;
@@ -98,8 +101,7 @@ public class MainPresenter {
             public void accept(Throwable throwable) throws Exception {
 
             }
-        });
-
+        }));
 
 
     }
@@ -121,11 +123,11 @@ public class MainPresenter {
         else view.setListCity(listCity);
     }
 
-    public void populatePreferences(int position) {
-        Set<String> cities = new HashSet<>();
+    public void populatePreferences(int position, String citytoAdd) {
+        Set<String> cities = new TreeSet<>(prefCities.getStringSet("cities", new HashSet<String>()));
         SharedPreferences.Editor editor = prefCities.edit();
-        cities.addAll(prefCities.getStringSet("cities", new HashSet<String>()));
-        cities.add(String.valueOf(listCityId.get(position)));
+
+        cities.add(String.valueOf(listCityId.get(position)) + ":" + citytoAdd.split(",")[0] + ":false");
         editor.putStringSet("cities", cities);
         editor.commit();
 
@@ -145,6 +147,10 @@ public class MainPresenter {
         if (prefCities.getString("lastCity", "none") != "none" && TextUtils.isEmpty(from)) {
             view.navigateToNextActivity();
         }
+    }
+
+    public void onDestroy() {
+        compositeDisposable.dispose();
     }
 
 }

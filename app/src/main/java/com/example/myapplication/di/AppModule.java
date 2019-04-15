@@ -32,11 +32,19 @@ public class AppModule {
         return context.getSharedPreferences("MyPref", Context.MODE_PRIVATE);
     }
 
+
     @Provides
     @Singleton
     @Named("position")
     SharedPreferences providesSharedPreferencesPosition(Context context) {
         return context.getSharedPreferences("Position", Context.MODE_PRIVATE);
+    }
+
+    @Provides
+    @Singleton
+    @Named("lastCity")
+    SharedPreferences providesSharedPreferencesLastCity(Context context) {
+        return context.getSharedPreferences("LastCity", Context.MODE_PRIVATE);
     }
 
     @Provides

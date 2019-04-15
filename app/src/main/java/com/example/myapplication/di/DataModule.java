@@ -16,8 +16,8 @@ public class DataModule {
 
     private static final String BASE_URL = "https://api.openweathermap.org/data/2.5/";
     public static final String BASE_URL_LOCATION = "https://api.timezonedb.com/v2.1/";
-    public static final String API_KEY = "INSERT_YOUR_API_KEY_HERE";
-    public static final String API_KEY_LOCATION = "INSERT_YOUR_API_KEY_HERE";
+    public static final String API_KEY = "15646a06818f61f7b8d7823ca833e1ce";
+    public static final String API_KEY_LOCATION = "97ZQTZ12XC49";
 
 
     @Provides

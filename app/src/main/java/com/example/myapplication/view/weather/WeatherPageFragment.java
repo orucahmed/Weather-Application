@@ -22,6 +22,7 @@ import android.widget.TextView;
 import com.example.myapplication.R;
 import com.example.myapplication.data.weather.Forecast;
 import com.example.myapplication.data.weather.ForecastDaily;
+import com.example.myapplication.data.weather.NotificationHandler;
 import com.example.myapplication.di.MyApplication;
 import com.example.myapplication.presentation.weather.WeatherPageFragmentPresenter;
 import com.example.myapplication.view.cityList.CityListActivity;
@@ -51,6 +52,8 @@ public class WeatherPageFragment extends Fragment implements SwipeRefreshLayout.
 
     @Inject
     protected WeatherPageFragmentPresenter presenter;
+
+
 
     @BindView(R.id.cityName)
     protected TextView cityName;
@@ -108,6 +111,7 @@ public class WeatherPageFragment extends Fragment implements SwipeRefreshLayout.
 
     @OnClick(R.id.listOfCities)
     public void onClick(View v) {
+
         Intent myIntent = new Intent(getContext(), CityListActivity.class);
         WeatherPageFragment.this.startActivity(myIntent);
     }

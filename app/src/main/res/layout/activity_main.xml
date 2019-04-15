@@ -1,31 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical">
 
+    <include layout="@layout/layout_toolbar"></include>
+
     <EditText
+        android:layout_marginTop="10dp"
+        android:id="@+id/textInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textInput"
-        android:maxLines="1"
         android:imeOptions="actionSearch"
-        android:inputType="text"/>
+        android:inputType="text"
+        android:maxLines="1"
+        android:hint="City name"
+        android:gravity="center"/>
 
     <TextView
+        android:id="@+id/noResults"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:gravity="center"
-        android:id="@+id/noResults"/>
+        android:gravity="center" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listCities"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/listCities"
         android:scrollbars="vertical">
 
     </androidx.recyclerview.widget.RecyclerView>

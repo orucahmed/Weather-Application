@@ -30,6 +30,10 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<CityCountryViewHold
 
     }
 
+    public String getCity(int position){
+        return cities.get(position);
+    }
+
     @NonNull
     @Override
     public CityCountryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

@@ -4,6 +4,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+
+    <include layout="@layout/layout_toolbar_city_list">
+
+    </include>
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,28 +21,23 @@
             android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cityList"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/cityList">
+                android:layout_height="wrap_content">
 
             </androidx.recyclerview.widget.RecyclerView>
 
 
             <Button
-                android:background="@drawable/transparent_bg_bordered_button"
                 android:id="@+id/addCIty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Add City"/>
+                android:background="@drawable/transparent_bg_bordered_button"
+                android:text="Add City" />
 
 
         </LinearLayout>
-
-
-
-
-
 
     </androidx.core.widget.NestedScrollView>
 

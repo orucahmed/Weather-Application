@@ -10,6 +10,7 @@ import com.example.myapplication.data.weather.ListCity;
 import com.example.myapplication.di.MyApplication;
 import com.example.myapplication.presentation.cityList.CityListPresenter;
 import com.example.myapplication.view.main.MainActivity;
+import com.example.myapplication.view.notification.NotificationActivity;
 import com.example.myapplication.view.weather.WeatherPageActivity;
 
 import java.util.List;
@@ -33,8 +34,20 @@ public class CityListActivity extends AppCompatActivity implements CityListPrese
     @BindView(R.id.cityList)
     protected RecyclerView recyclerView;
 
+
     private CityListRecycleViewAdapter adapter;
     private ItemTouchHelper itemTouchHelper;
+
+    @OnClick(R.id.closeBtn)
+    public void onClickClose(View v){
+        finish();
+    }
+
+    @OnClick(R.id.moreBtn)
+    public void onClickMore(View v){
+        Intent myIntent = new Intent(CityListActivity.this, NotificationActivity.class);
+        CityListActivity.this.startActivity(myIntent);
+    }
 
 
     @OnClick(R.id.addCIty)
