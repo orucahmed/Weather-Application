@@ -59,7 +59,7 @@ public class CityListPresenter {
             public void accept(WeatherResponseCities weatherResponseCities) throws Exception {
                 List<ListCity> listCity = new ArrayList<>();
                 for (int i = 0; i < weatherResponseCities.getListResponse().size(); i++) {
-                    listCity.add(new ListCity(weatherResponseCities.getListResponse().get(i).getDt(), weatherResponseCities.getListResponse().get(i).getName(), weatherResponseCities.getListResponse().get(i).getMain().getTemp(), weatherResponseCities.getListResponse().get(i).getSys().getCountry(), weatherResponseCities.getListResponse().get(i).getId()));
+                    listCity.add(new ListCity(weatherResponseCities.getListResponse().get(i).getDt(), weatherResponseCities.getListResponse().get(i).getName(), weatherResponseCities.getListResponse().get(i).getMain().getTemp(), weatherResponseCities.getListResponse().get(i).getId()));
                 }
                 view.setCityList(listCity);
             }

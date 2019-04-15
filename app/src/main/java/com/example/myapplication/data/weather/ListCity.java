@@ -5,16 +5,15 @@ public class ListCity {
     private long dt;
     private String name;
     private float temp;
-    private String country;
+
     private long id;
 
 
 
-    public ListCity(long dt, String name, float temp, String country, long id) {
+    public ListCity(long dt, String name, float temp, long id) {
         this.dt = dt;
         this.name = name;
         this.temp = temp;
-        this.country = country;
         this.id = id;
     }
 
@@ -34,7 +33,5 @@ public class ListCity {
         return temp;
     }
 
-    public String getCountry() {
-        return country;
-    }
+
 }

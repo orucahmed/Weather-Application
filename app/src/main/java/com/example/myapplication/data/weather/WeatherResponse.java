@@ -4,6 +4,7 @@ package com.example.myapplication.data.weather;
 import java.util.List;
 
 public class WeatherResponse {
+
     private long id;
     private String name;
     private Coord coord;
@@ -11,42 +12,13 @@ public class WeatherResponse {
     private Main main;
     private float visibility;
     private Wind wind;
-    private Rain rain;
-    private Clouds clouds;
-    private long dt;
     private Sys sys;
-    private long cod;
-    private String base;
-    private Snow snow;
 
 
     public Sys getSys() {
         return sys;
     }
 
-    public Snow getSnow() {
-        return snow;
-    }
-
-    public String getBase() {
-        return base;
-    }
-
-    public long getCod() {
-        return cod;
-    }
-
-    public long getDt() {
-        return dt;
-    }
-
-    public Rain getRain() {
-        return rain;
-    }
-
-    public Clouds getClouds() {
-        return clouds;
-    }
 
     public float getVisibility() {
         return visibility;

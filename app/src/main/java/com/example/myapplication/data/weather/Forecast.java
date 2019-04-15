@@ -6,8 +6,8 @@ public class Forecast {
     private String icon;
     private float temp;
 
-    public Forecast(String day, String icon, float temp) {
-        this.hour = day;
+    public Forecast(String hour, String icon, float temp) {
+        this.hour = hour;
         this.icon = icon;
         this.temp = temp;
     }

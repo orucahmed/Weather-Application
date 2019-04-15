@@ -9,10 +9,8 @@ import io.objectbox.annotation.Entity;
 
 public class WeatherResponseFiveDays {
 
-    private long code;
-    private String message;
-    private City city;
-    private long cnt;
+
+
     @SerializedName("list")
     private List<ListResponse> listResponse;
 
@@ -22,19 +20,8 @@ public class WeatherResponseFiveDays {
         return listResponse;
     }
 
-    public City getCity() {
-        return city;
-    }
 
-    public long getCode() {
-        return code;
-    }
 
-    public String getMessage() {
-        return message;
-    }
 
-    public long getCnt() {
-        return cnt;
-    }
+
 }
