@@ -3,6 +3,14 @@ package com.example.myapplication.presentation.weather;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.example.myapplication.data.database.ListDailyDB;
+import com.example.myapplication.data.database.ListResponseDB;
+import com.example.myapplication.data.database.ObjectBox;
+import com.example.myapplication.data.database.WeatherResponseDB;
+import com.example.myapplication.data.database.WeatherResponseDaysDB;
+import com.example.myapplication.data.database.WeatherResponseFiveDaysDB;
+import com.example.myapplication.data.weather.Weather;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -50,6 +58,7 @@ public class WeatherPagePresenter {
         NUM_PAGES = listCity.size();
         view.setCityList(listCity);
     }
+
 
     public void setPrefPosition(int position) {
         SharedPreferences.Editor editor = prefPosition.edit();

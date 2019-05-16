@@ -1,4 +1,4 @@
-package com.example.myapplication.data.weather;
+package com.example.myapplication.data.notification;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -12,6 +12,8 @@ import android.text.TextUtils;
 import android.widget.RemoteViews;
 
 import com.example.myapplication.R;
+import com.example.myapplication.data.weather.WeatherResponseCities;
+import com.example.myapplication.data.weather.WeatherService;
 import com.example.myapplication.di.DataModule;
 import com.example.myapplication.view.weather.WeatherPageActivity;
 import com.squareup.picasso.Picasso;

@@ -31,7 +31,7 @@
             tools:ignore="DuplicateActivity" />
 
         <service
-            android:name=".data.weather.NotificationJobService"
+            android:name=".data.notification.NotificationJobService"
             android:permission="android.permission.BIND_JOB_SERVICE">
         </service>
     </application>

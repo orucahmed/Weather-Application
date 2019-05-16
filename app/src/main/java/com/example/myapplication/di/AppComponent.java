@@ -1,6 +1,6 @@
 package com.example.myapplication.di;
 
-import com.example.myapplication.data.weather.NotificationJobService;
+import com.example.myapplication.data.notification.NotificationJobService;
 import com.example.myapplication.view.cityList.CityListActivity;
 import com.example.myapplication.view.main.MainActivity;
 import com.example.myapplication.view.notification.NotificationActivity;

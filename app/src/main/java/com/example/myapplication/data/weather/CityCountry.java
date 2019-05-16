@@ -2,9 +2,15 @@ package com.example.myapplication.data.weather;
 
 public class CityCountry implements Comparable<CityCountry> {
 
-    public String name;
-    public String country;
-    public long id;
+    private String name;
+    private String country;
+    private long id;
+
+    public CityCountry(String name, String country, long id) {
+        this.name = name;
+        this.country = country;
+        this.id = id;
+    }
 
     public long getId() {
         return id;

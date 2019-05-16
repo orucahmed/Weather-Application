@@ -1,4 +1,4 @@
-package com.example.myapplication.data.Location;
+package com.example.myapplication.data.location;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;

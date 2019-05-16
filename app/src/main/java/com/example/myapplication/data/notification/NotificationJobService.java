@@ -1,4 +1,4 @@
-package com.example.myapplication.data.weather;
+package com.example.myapplication.data.notification;
 
 import android.app.job.JobParameters;
 import android.app.job.JobService;

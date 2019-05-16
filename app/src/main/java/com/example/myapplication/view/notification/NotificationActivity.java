@@ -2,15 +2,13 @@ package com.example.myapplication.view.notification;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.widget.RadioButton;
 
 import com.example.myapplication.R;
-import com.example.myapplication.data.weather.NotificationList;
+import com.example.myapplication.data.notification.NotificationList;
 import com.example.myapplication.di.MyApplication;
 import com.example.myapplication.presentation.notification.NotificationPresenter;
 import com.example.myapplication.view.main.MainActivity;
-import com.example.myapplication.view.weather.WeatherPageActivity;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
 package com.example.myapplication.di;
 
-import com.example.myapplication.data.Location.LocationService;
+import com.example.myapplication.data.location.LocationService;
 import com.example.myapplication.data.weather.WeatherService;
 
 import javax.inject.Singleton;

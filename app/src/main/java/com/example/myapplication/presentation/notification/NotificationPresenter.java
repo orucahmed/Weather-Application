@@ -1,9 +1,8 @@
 package com.example.myapplication.presentation.notification;
 
 import android.content.SharedPreferences;
-import android.view.View;
 
-import com.example.myapplication.data.weather.NotificationList;
+import com.example.myapplication.data.notification.NotificationList;
 
 import java.util.ArrayList;
 import java.util.HashSet;

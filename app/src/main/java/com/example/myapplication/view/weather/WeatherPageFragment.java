@@ -22,7 +22,6 @@ import android.widget.TextView;
 import com.example.myapplication.R;
 import com.example.myapplication.data.weather.Forecast;
 import com.example.myapplication.data.weather.ForecastDaily;
-import com.example.myapplication.data.weather.NotificationHandler;
 import com.example.myapplication.di.MyApplication;
 import com.example.myapplication.presentation.weather.WeatherPageFragmentPresenter;
 import com.example.myapplication.view.cityList.CityListActivity;
@@ -128,7 +127,9 @@ public class WeatherPageFragment extends Fragment implements SwipeRefreshLayout.
         presenter.onCreate(this);
         adapter = new ForecastRecycleViewAdapter();
         adapterDaily = new ForecastDailyRecycleViewAdapter();
-        presenter.getData(getArguments().getString("city").replaceAll("\\s+", ""));
+
+        presenter.getDataDB(getArguments().getString("city").replaceAll("\\s+", ""));
+
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
         recyclerView.setAdapter(adapter);
         recyclerViewDaily.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));

@@ -5,10 +5,7 @@ public class ListCity {
     private long dt;
     private String name;
     private float temp;
-
     private long id;
-
-
 
     public ListCity(long dt, String name, float temp, long id) {
         this.dt = dt;

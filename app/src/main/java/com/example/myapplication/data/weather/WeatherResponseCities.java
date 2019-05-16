@@ -9,8 +9,12 @@ public class WeatherResponseCities {
     @SerializedName("list")
     List<ListResponseCity> listResponse;
 
+    public WeatherResponseCities(List<ListResponseCity> listResponse) {
+        this.listResponse = listResponse;
+    }
 
     public List<ListResponseCity> getListResponse() {
         return listResponse;
     }
+
 }

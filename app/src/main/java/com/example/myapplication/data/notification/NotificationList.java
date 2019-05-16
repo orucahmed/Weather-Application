@@ -1,4 +1,4 @@
-package com.example.myapplication.data.weather;
+package com.example.myapplication.data.notification;
 
 public class NotificationList {
     private String name;

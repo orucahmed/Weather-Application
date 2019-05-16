@@ -21,7 +21,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.myapplication.R;
-import com.example.myapplication.data.weather.NotificationJobService;
+import com.example.myapplication.data.notification.NotificationJobService;
 import com.example.myapplication.di.MyApplication;
 import com.example.myapplication.presentation.main.MainPresenter;
 import com.example.myapplication.view.weather.WeatherPageActivity;

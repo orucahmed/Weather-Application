@@ -5,7 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.myapplication.R;
-import com.example.myapplication.data.weather.NotificationList;
+import com.example.myapplication.data.notification.NotificationList;
 
 
 import java.util.ArrayList;
